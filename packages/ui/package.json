@@ -1,11 +1,14 @@
 {
-  "name": "@localpick/design-system",
+  "name": "ui",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build-storybook": "storybook build"
+  },
+  "exports": {
+    ".": "./src/index.ts"
   },
   "keywords": [],
   "author": "",
