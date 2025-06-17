@@ -1,9 +1,8 @@
 "use client";
 
-import { useGeoLocation } from "@/hooks/useGeolocation";
-import { Button } from "ui";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { Button } from "@place-memo/ui";
+import { useGeoLocation } from "@place-memo/api";
 
 export default function Home() {
   const { location, errorMessage } = useGeoLocation();

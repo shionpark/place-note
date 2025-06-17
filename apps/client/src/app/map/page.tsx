@@ -1,10 +1,7 @@
 "use client";
 
 import KakaoMap from "@/components/KakaoMap";
-
-function Button() {
-  return <button className="bg-blue-500 text-white px-4 py-2">Test</button>;
-}
+import { Button } from "@place-memo/ui";
 
 export default function Map() {
   return (
