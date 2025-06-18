@@ -34,7 +34,5 @@ export const useKakaoMapLoader = () => {
     });
   };
 
-  const onLoadFail = (e: Event) => console.error("❌ Kakao SDK 로드 실패", e);
-
-  return { mapContainer, mapObj, onLoadKakaoAPI, onLoadFail };
+  return { mapContainer, mapObj, onLoadKakaoAPI };
 };
