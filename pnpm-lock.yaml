@@ -88,7 +88,30 @@ importers:
 
   packages/api: {}
 
+  packages/tailwind-config:
+    dependencies:
+      autoprefixer:
+        specifier: ^10.4.21
+        version: 10.4.21(postcss@8.5.6)
+    devDependencies:
+      postcss:
+        specifier: ^8.5.6
+        version: 8.5.6
+      tailwindcss:
+        specifier: ^4.1.10
+        version: 4.1.10
+
   packages/ui:
+    dependencies:
+      '@tailwindcss/postcss':
+        specifier: ^4.1.10
+        version: 4.1.10
+      postcss:
+        specifier: ^8.5.6
+        version: 8.5.6
+      tailwindcss:
+        specifier: ^4.1.10
+        version: 4.1.10
     devDependencies:
       '@storybook/addon-docs':
         specifier: ^8.6.14
