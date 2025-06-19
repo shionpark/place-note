@@ -22,7 +22,8 @@
       "@/*": ["./src/*"],
       "@place-memo/api": ["../../packages/api/src"],
       "@place-memo/tailwind-config": ["../../packages/config/tailwind"]
-    }
+    },
+    "types": ["kakao.maps.d.ts"]
   },
   "include": [
     "next-env.d.ts",
