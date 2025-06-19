@@ -6,16 +6,25 @@ import { useGeoLocation, useKakaoMapLoader } from "@place-memo/api";
 import { useKakaoMapScriptLoader } from "@/hooks/useKakaoMapScriptLoader";
 
 export default function KakaoMap() {
-  const { location } = useGeoLocation();
-  const { mapContainer, onLoadKakaoAPI } = useKakaoMapLoader();
-  const { sdkLoaded, kakaoMapUrl, onLoadSuccess, onLoadFail } =
+  const { sdkLoaded, kakaoMapUrl, onLoad, onLoadFail } =
     useKakaoMapScriptLoader();
+  const { mapObj, mapContainer, onLoadKakaoAPI, searchKeywords } =
+    useKakaoMapLoader();
+
+  const { location } = useGeoLocation();
 
   useEffect(() => {
-    if (sdkLoaded && location?.latitude && location.longitude) {
-      onLoadKakaoAPI({ lat: location.latitude, lng: location.longitude });
+    if (sdkLoaded && location) {
+      onLoadKakaoAPI(location);
     }
   }, [sdkLoaded, location]);
+
+  useEffect(() => {
+    if (mapObj.current) {
+      console.log("current!");
+      searchKeywords(mapObj.current, "판교 치킨");
+    }
+  }, [mapObj.current]);
 
   return (
     <>
@@ -23,7 +32,7 @@ export default function KakaoMap() {
         strategy="lazyOnload"
         type="text/javascript"
         src={kakaoMapUrl}
-        onLoad={onLoadSuccess}
+        onLoad={onLoad}
         onError={onLoadFail}
       />
       <div ref={mapContainer} className="w-[60rem] h-[40rem]"></div>
