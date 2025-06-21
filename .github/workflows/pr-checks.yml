@@ -2,7 +2,7 @@ name: place-note PR 체크
 
 on:
   pull_request:
-    branches: [develop]
+    branches: [main, develop]
 
 jobs:
   lint:
