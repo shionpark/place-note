@@ -1,0 +1,91 @@
+name: place-note PR 체크
+
+on:
+  pull_request:
+    branches: [develop]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 코드 checkout
+        uses: actions/checkout@v4
+
+      - name: pnpm 설정
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: 의존성 설치
+        run: pnpm install
+
+      - name: 🔎 ESLint 실행
+        run: pnpm lint
+
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 코드 checkout
+        uses: actions/checkout@v4
+
+      - name: pnpm 설정
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: 의존성 설치
+        run: pnpm install
+
+      - name: 🔎 타입스크립트 타입 검사 실행
+        run: pnpm typecheck
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 코드 checkout
+        uses: actions/checkout@v4
+
+      - name: pnpm 설정
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: 의존성 설치
+        run: pnpm install
+
+      - name: 🛠 전체 패키지 빌드
+        run: pnpm turbo run build --filter=...
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 코드 checkout
+        uses: actions/checkout@v4
+
+      - name: pnpm 설정
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: 의존성 설치
+        run: pnpm install
+
+      - name: 🧪 테스트 실행
+        run: pnpm turbo run test --filter=...
+
+  storybook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 코드 checkout
+        uses: actions/checkout@v4
+
+      - name: pnpm 설정
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: 의존성 설치
+        run: pnpm install
+
+      - name: 📘 스토리북 빌드
+        run: pnpm --filter ui build-storybook
