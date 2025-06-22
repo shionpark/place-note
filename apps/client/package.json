@@ -1,5 +1,5 @@
 {
-  "name": "@place-memo/client",
+  "name": "@place-note/client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@place-memo/api": "workspace:*",
-    "@place-memo/ui": "workspace:*",
+    "@place-note/api": "workspace:*",
+    "@place-note/ui": "workspace:*",
     "next": "15.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

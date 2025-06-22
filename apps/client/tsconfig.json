@@ -20,8 +20,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@place-memo/api": ["../../packages/api/src"],
-      "@place-memo/tailwind-config": ["../../packages/config/tailwind"]
+      "@place-note/api": ["../../packages/api/src"],
+      "@place-note/tailwind-config": ["../../packages/config/tailwind"]
     },
     "types": ["kakao.maps.d.ts"]
   },

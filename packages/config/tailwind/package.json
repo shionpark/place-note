@@ -1,5 +1,5 @@
 {
-  "name": "@place-memo/tailwind-config",
+  "name": "@place-note/tailwind-config",
   "version": "1.0.0",
   "main": "index.js",
   "exports": {

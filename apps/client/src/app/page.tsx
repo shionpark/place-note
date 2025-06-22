@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "@place-memo/ui";
-import { useGeoLocation } from "@place-memo/api";
+import { Button } from "@place-note/ui";
+import { useGeoLocation } from "@place-note/api";
 
 export default function Home() {
   const { location, errorMessage } = useGeoLocation();

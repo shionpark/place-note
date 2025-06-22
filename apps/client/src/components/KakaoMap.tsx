@@ -2,7 +2,7 @@
 
 import Script from "next/script";
 import { useEffect } from "react";
-import { useGeoLocation, useKakaoMapLoader } from "@place-memo/api";
+import { useGeoLocation, useKakaoMapLoader } from "@place-note/api";
 import { useKakaoMapScriptLoader } from "@/hooks/useKakaoMapScriptLoader";
 
 export default function KakaoMap() {

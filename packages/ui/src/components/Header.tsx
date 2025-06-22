@@ -3,7 +3,7 @@ export default function Header() {
     <div className="flex items-center w-full bg-amber-500">
       {/* <img src="/icon.png" className="w-16" /> */}
       <a href="/">
-        <span className="font-bold">LocalPick</span>
+        <span className="font-bold">PlaceNote</span>
       </a>
     </div>
   );

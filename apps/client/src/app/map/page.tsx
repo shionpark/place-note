@@ -1,7 +1,7 @@
 "use client";
 
 import KakaoMap from "@/components/KakaoMap";
-import { Button } from "@place-memo/ui";
+import { Button } from "@place-note/ui";
 
 export default function Map() {
   return (
