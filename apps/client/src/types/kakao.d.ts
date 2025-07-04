@@ -1,10 +1,4 @@
-declare global {
-  /** SDK 전역 객체 */
-  const kakao: typeof import("./kakao-namespace").kakao;
-  interface Window {
-    kakao: typeof kakao;
-  }
-}
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 declare namespace kakao.maps {
   interface MapOptions {
@@ -19,7 +13,7 @@ declare namespace kakao.maps {
   }
 
   class LatLng {
-    constructor(lat: number, lng: number);
+    constructor(lat: number | string, lng: number | string);
   }
 
   class Marker {

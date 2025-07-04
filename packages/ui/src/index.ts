@@ -1,4 +1,3 @@
-export { default as Button } from "./components/Button";
-export { default as Header } from "./components/Header";
+export * from "./components";
 
-import "./styles/globals.css";
+// import "./styles/globals.css";

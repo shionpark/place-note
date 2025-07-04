@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
     "../../packages/ui/src/**/*.{js,ts,jsx,tsx}",
@@ -6,5 +6,6 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
 };
+
+export default config;

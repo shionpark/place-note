@@ -11,6 +11,11 @@ const preview: Preview = {
       },
     },
   },
+  // argTypes: {
+  //   size: {
+  //     control: ["sm", "md", "lg"],
+  //   },
+  // },
 };
 
 export default preview;

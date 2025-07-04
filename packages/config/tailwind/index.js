@@ -1,6 +1,4 @@
-/** packages/config/tailwind/index.js */
-
-module.exports = {
+const config = {
   theme: {
     extend: {
       colors: {
@@ -29,3 +27,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+export default config;

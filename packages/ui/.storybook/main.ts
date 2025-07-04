@@ -14,6 +14,13 @@ const config: StorybookConfig = {
   docs: {
     autodocs: true,
   },
+  core: {
+    builder: "@storybook/builder-vite", // 👈 The builder enabled here.
+  },
+  typescript: {
+    reactDocgen: "react-docgen-typescript", // ← TS 전용 파서로 교체
+    // reactDocgen: false,                  // ← docgen 자체 비활성화도 가능
+  },
 };
 
 export default config;

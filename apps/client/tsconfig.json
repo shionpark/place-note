@@ -20,18 +20,13 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
+      "@place-note/ui": ["../../packages/ui/src"],
       "@place-note/api": ["../../packages/api/src"],
+      "@place-note/eslint-config": ["../../packages/config/eslint"],
       "@place-note/tailwind-config": ["../../packages/config/tailwind"]
     },
     "types": ["kakao.maps.d.ts"]
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "../../packages/api/src/kakao.d.ts",
-    "../../packages/api/src/index.ts"
-  ],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "../../tsconfig.json"]
 }
