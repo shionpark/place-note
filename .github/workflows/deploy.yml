@@ -1,0 +1,53 @@
+name: place-note 배포 체크
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 코드 checkout
+        uses: actions/checkout@v4
+
+      - name: Node.js 설정
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: pnpm 설정
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: false
+
+      - name: 의존성 설치
+        run: pnpm install
+
+      - name: Turborepo 캐시 설정
+        uses: actions/cache@v3
+        with:
+          path: |
+            .turbo
+            node_modules
+          key: ${{ runner.os }}-turborepo-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - name: 🛠 클라이언트 앱 빌드
+        run: pnpm --filter client build
+
+      - name: 📘 스토리북 빌드 (선택)
+        run: pnpm --filter ui build-storybook
+
+      - name: 🚀 Vercel CLI로 배포 실행
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          vercel deploy --prod --yes --token=$VERCEL_TOKEN \
+            --scope=$VERCEL_ORG_ID \
+            --project=$VERCEL_PROJECT_ID \
+            --cwd=apps/client

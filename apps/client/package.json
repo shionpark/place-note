@@ -1,0 +1,26 @@
+{
+  "name": "@place-note/client",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@place-note/api": "workspace:*",
+    "@place-note/ui": "workspace:*",
+    "@place-note/store": "workspace:*",
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0"
+  },
+  "devDependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
+    "eslint-config-next": "15.3.2",
+    "kakao.maps.d.ts": "^0.1.40"
+  }
+}

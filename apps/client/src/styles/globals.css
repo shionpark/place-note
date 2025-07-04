@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+}
+
+.button {
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.disabled {
+  opacity: 50;
+  background-color: lightgray;
+  border: 1px solid lightgray;
+  pointer-events: none;
+}

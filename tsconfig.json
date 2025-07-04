@@ -1,0 +1,10 @@
+// tsconfig.base.json (repo 루트 하나로 통일, 모든 패키지가 extends)
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["apps/client/src/*"], // 앱 전용 별칭
+      "@place-note/*": ["packages/*/src"] // 새 패키지 추가해도 자동 대응
+    }
+  }
+}

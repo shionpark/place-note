@@ -1,5 +1,5 @@
 {
-  "name": "localpick",
+  "name": "place-note",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,9 +14,25 @@
   "license": "ISC",
   "packageManager": "pnpm@10.11.0",
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4.1.7",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
+    "clsx": "^2.1.1",
     "concurrently": "^9.1.2",
+    "eslint": "^9",
     "open-cli": "^8.0.0",
+    "postcss": "^8.5.3",
     "prettier": "^3.5.3",
-    "turbo": "^2.5.3"
-  }
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "tailwindcss": "^4.1.7",
+    "turbo": "^2.5.3",
+    "typescript": "^5",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {}
 }
